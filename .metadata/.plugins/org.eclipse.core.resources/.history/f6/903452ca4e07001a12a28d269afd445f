@@ -1,0 +1,9 @@
+package br.com.sgt.entidades;
+
+
+public interface User {
+	
+	
+	
+
+}
