@@ -1,0 +1,32 @@
+package br.com.sgt.conhecimento.estidade;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+import br.com.sgt.entidades.NivelConhecimento;
+
+@Entity
+public class Conhecimento {
+
+	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long sequencial;
+	
+	@Enumerated(EnumType.STRING)
+	private NivelConhecimento nivelConhecimento;
+	
+	@NotNull
+	private String descricao;
+	
+	private String observacao;
+	
+	
+}

@@ -1,0 +1,28 @@
+package br.com.sgt.formacao.entidade;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+@Entity
+public class Formacao {
+	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long sequencial;
+	
+	private LocalDate dtInicio;
+	
+	private LocalDate dtFim;
+	
+	@Enumerated(EnumType.)
+
+}

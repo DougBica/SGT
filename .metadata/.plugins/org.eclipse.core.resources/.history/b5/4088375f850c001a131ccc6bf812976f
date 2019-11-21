@@ -1,0 +1,17 @@
+package br.com.sgt.core.service;
+
+import org.springframework.stereotype.Service;
+
+import br.com.sgt.core.entidades.UserDto;
+import br.com.sgt.core.rest.UserRest;
+
+@Service
+public class UserRestImp implements UserRest{
+
+	
+	public UserDto listarUser(Long id) {
+		
+		return null;
+	}
+
+}

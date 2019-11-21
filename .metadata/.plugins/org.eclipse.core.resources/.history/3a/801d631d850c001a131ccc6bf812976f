@@ -1,0 +1,15 @@
+package br.com.sgt.core.service;
+
+import br.com.sgt.core.entidades.UserDto;
+import br.com.sgt.core.rest.UserRest;
+
+
+public class UserRestImp implements UserRest{
+
+	
+	public UserDto listarUser(Long id) {
+		
+		return "hello";
+	}
+
+}

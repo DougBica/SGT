@@ -1,0 +1,31 @@
+package br.com.sgt.core.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.sgt.core.entidades.User;
+import br.com.sgt.core.entidades.UserDto;
+import br.com.sgt.core.repository.UserRepository;
+import br.com.sgt.core.rest.UserRest;
+import br.com.sgt.error.ErroBancoDeDados;
+
+@Service
+public class UserRestImp implements UserRest{
+
+	@Autowired
+	UserRepository userRepository;
+	
+	public UserDto listarUser(Long id) {		
+			
+			Optional<User> user = userRepository.findById(id);
+			if(user == null) {
+				throw new ErroBancoDeDados("não encontrado usuario");
+			}
+			return UserDto.converter(user.get());
+		
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package br.com.sgt.entidades;
+
+public enum NivelConhecimento {
+	
+	BASICO,
+	INICIAL,
+	INTERMEDIARIO,
+	EXPERIENTE,
+	EXIMIO;
+
+}

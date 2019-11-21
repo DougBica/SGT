@@ -1,0 +1,8 @@
+package br.com.sgt.core.rest;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController(value = "/user")
+public interface UserRest {
+
+}

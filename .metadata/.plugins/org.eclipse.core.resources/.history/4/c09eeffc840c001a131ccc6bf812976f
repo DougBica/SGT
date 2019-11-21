@@ -1,0 +1,7 @@
+package br.com.sgt.aluno.rest;
+
+
+
+public class UserRestImp {
+
+}

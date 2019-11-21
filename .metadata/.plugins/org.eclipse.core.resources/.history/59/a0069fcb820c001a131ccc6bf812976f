@@ -1,0 +1,20 @@
+package br.com.sgt.core.entidades;
+
+import java.util.List;
+
+import br.com.sgt.conhecimento.estidade.Conhecimento;
+import br.com.sgt.formacao.entidade.Formacao;
+import br.com.sgt.hitoricoTrabalho.entidade.HistoricoTrabalho;
+
+public class UserDto {
+	
+	private String nome;
+	private Integer idade;
+	private String fotoPath;
+	private List<Conhecimento> conhecimentos;
+	private List<Formacao> formacoes;
+	private List<HistoricoTrabalho> historicoTrabalho;
+	private List<Telefone> telefones;	
+	private Status status ;
+	private List<Permissao> permissoes;
+}
