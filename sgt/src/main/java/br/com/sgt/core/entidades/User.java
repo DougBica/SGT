@@ -10,12 +10,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Email;
 
 import org.hibernate.validator.constraints.br.CPF;
 
 import com.sun.istack.NotNull;
 
 import br.com.sgt.conhecimento.estidade.Conhecimento;
+import br.com.sgt.core.enumerator.Status;
 import br.com.sgt.formacao.entidade.Formacao;
 import br.com.sgt.hitoricoTrabalho.entidade.HistoricoTrabalho;
 
@@ -36,6 +38,9 @@ public class User {
 	private String nome;
 	private Integer idade;
 	private String fotoPath;
+	
+	@Email
+	private String email;
 	
 	@OneToMany
 	private List<Conhecimento> conhecimentos;
@@ -133,6 +138,13 @@ public class User {
 	}
 	public void setTelefones(List<Telefone> telefones) {
 		this.telefones = telefones;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	

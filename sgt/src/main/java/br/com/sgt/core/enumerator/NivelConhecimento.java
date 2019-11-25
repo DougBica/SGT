@@ -1,4 +1,4 @@
-package br.com.sgt.core.entidades;
+package br.com.sgt.core.enumerator;
 
 public enum NivelConhecimento {
 	

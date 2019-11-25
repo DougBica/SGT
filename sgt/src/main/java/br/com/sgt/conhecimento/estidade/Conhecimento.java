@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
-import br.com.sgt.core.entidades.NivelConhecimento;
+import br.com.sgt.core.enumerator.NivelConhecimento;
 
 @Entity
 public class Conhecimento {

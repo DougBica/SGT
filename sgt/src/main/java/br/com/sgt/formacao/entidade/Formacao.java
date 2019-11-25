@@ -9,7 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import br.com.sgt.core.entidades.EnSituacao;
+import br.com.sgt.core.enumerator.EnSituacao;
 
 
 @Entity

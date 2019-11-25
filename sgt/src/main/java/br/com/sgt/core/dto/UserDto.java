@@ -4,9 +4,9 @@ import java.util.List;
 
 import br.com.sgt.conhecimento.estidade.Conhecimento;
 import br.com.sgt.core.entidades.Permissao;
-import br.com.sgt.core.entidades.Status;
 import br.com.sgt.core.entidades.Telefone;
 import br.com.sgt.core.entidades.User;
+import br.com.sgt.core.enumerator.Status;
 import br.com.sgt.formacao.entidade.Formacao;
 import br.com.sgt.hitoricoTrabalho.entidade.HistoricoTrabalho;
 
