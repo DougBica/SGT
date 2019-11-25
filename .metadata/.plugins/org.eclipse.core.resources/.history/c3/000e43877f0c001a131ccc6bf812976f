@@ -1,8 +1,0 @@
-package br.com.sgt.core;
-
-public enum Status {
-	
-	ATIVO,
-	BLOQUEADO,
-	DESATIVO;
-}

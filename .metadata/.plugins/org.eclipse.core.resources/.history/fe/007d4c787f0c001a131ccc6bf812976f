@@ -1,9 +1,0 @@
-package br.com.sgt.entidades;
-
-public enum EnSituacao {
-	
-	CONCLUÍDO,
-	PAUSADO,
-	CURSANDO;
-
-}

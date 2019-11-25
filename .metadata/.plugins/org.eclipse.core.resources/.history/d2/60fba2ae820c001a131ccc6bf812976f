@@ -1,5 +1,0 @@
-package br.com.sgt.core.entidades;
-
-public class UserDto {
-
-}

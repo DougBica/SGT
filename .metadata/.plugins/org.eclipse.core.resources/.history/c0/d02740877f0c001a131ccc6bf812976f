@@ -1,9 +1,0 @@
-package br.com.sgt.core;
-
-public enum EnSituacao {
-	
-	CONCLUÍDO,
-	PAUSADO,
-	CURSANDO;
-
-}

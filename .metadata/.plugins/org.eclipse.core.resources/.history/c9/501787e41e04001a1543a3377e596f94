@@ -1,7 +1,0 @@
-package br.com.sgt.aluno.entidade;
-
-import br.com.sgt.entidades.User;
-
-public class Aluno implements User{
-
-}

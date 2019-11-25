@@ -1,7 +1,0 @@
-
-<util:map id="dbProps">
-    <entry key="db.driver" value="com.mysql.cj.jdbc.Driver"/>
-    <entry key="db.jdbcurl" value="jdbc:mysql://localhost/world"/>
-    <entry key="db.username" value="myuser"/>
-    <entry key="db.password" value="mypass"/>
-</util:map>
