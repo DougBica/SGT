@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button (click)='voltarParaPerfil()' defaultHref="perfil"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Dados Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <!-- <img src="/assets/shapes.svg" alt="" /> -->
+        <ion-card-header>       
+          <ion-card-title>Seus Dados</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      <ion-content>
+        <ion-list >
+            <ion-card style="cursor: pointer;"padding (click)=mostrarBtnModificar()>
+              <ion-input> 
+                Nome: {{usuario?.nome}} 
+              </ion-input>
+              <ion-input> 
+                  Idade: {{usuario?.idade}} 
+                </ion-input>
+              <ion-input> 
+                Último Trabalho: {{usuario?.historicoTrabalho[0].nomeEmpresa}}
+              </ion-input>
+              <ion-input> 
+                Última Formação: {{usuario?.formacoes[0].nomeCurso}}
+              </ion-input>
+              <ion-input> 
+                  Última Conhecimento: {{usuario?.conhecimentos[0].descricao}}
+                </ion-input>
+              
+              <ion-button *ngIf="editar" expand="full" color="primary" (click)=modificarUser(p)>Editar</ion-button>
+            </ion-card>   
+        </ion-list>
+      </ion-content>
+    </ion-content>
+
+

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <ion-menu contentId="content" type="overlay">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Menu</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-list>
+            <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages" >
+              <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" (click)="passaId(p.url)"[class.active-item]="selectPath.startsWith(p.url)">
+                <ion-icon slot="start" [name]="p.icon"></ion-icon>
+                <ion-label>
+                  {{p.title}}
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+        </ion-content>
+      </ion-menu> 
+      <ion-router-outlet id="content" main></ion-router-outlet>
+     
+          <ion-card class="welcome-card" >
+            <img src="/assets/shapes.svg" alt="" />
+            <ion-card-header>       
+              <ion-card-title>Bem Vindo ao SGT</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+       
+          <ion-card>
+            <ion-card-header>       
+              <ion-card-title>Suas Atividaddes</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+
+    </ion-content>
+
+

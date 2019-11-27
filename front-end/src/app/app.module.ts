@@ -11,6 +11,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { PerfilModule } from './perfil/perfil.module';
+import { LoginComponent } from './login/login.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { LoginModule } from './login/login.module';
+import { ConhecimentoPageModule } from './perfil/conhecimento/conhecimento.module';
+import { FormacaoPageModule } from './perfil/formacao/formacao.module';
+import { ExperienciaPageModule } from './perfil/experiencia/experiencia.module';
+import { UserPageModule } from './perfil/user/user.module';
 
 
 
@@ -19,14 +27,20 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
-  entryComponents: [],
+  entryComponents: [ ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    PerfilModule,
+    LoginModule,
+    ConhecimentoPageModule,
+    FormacaoPageModule,
+    ExperienciaPageModule,
+    UserPageModule
   ],
   providers: [
     StatusBar,

@@ -23,6 +23,9 @@ public interface UserRest {
 	@GetMapping(value = "/listar/{id}")
 	public UserDto listarUser(@PathVariable Long id);
 	
+	@GetMapping(value = "/buscar/{id}")
+	public UserDto buscarUsuario(@PathVariable Long id);
+	
 	@PostMapping(value = "/aut")
 	public UserDto autUser(@RequestBody DadosLogin dadosLogin);
 }

@@ -11,7 +11,7 @@ import br.com.sgt.formacao.entidade.Formacao;
 import br.com.sgt.hitoricoTrabalho.entidade.HistoricoTrabalho;
 
 public class UserDto {
-	
+	private Long id;
 	private String nome;
 	private Integer idade;
 	private String fotoPath;
@@ -24,10 +24,11 @@ public class UserDto {
 	
 	public UserDto() {}
 	
-	public UserDto(String nome, Integer idade, String fotoPath, List<Conhecimento> conhecimentos,
+	public UserDto(Long id,String nome, Integer idade, String fotoPath, List<Conhecimento> conhecimentos,
 			List<Formacao> formacoes, List<HistoricoTrabalho> historicoTrabalho, List<Telefone> telefones,
 			Status status, List<Permissao> permissoes) {
 		super();
+		this.id = id;
 		this.nome = nome;
 		this.idade = idade;
 		this.fotoPath = fotoPath;
@@ -40,7 +41,7 @@ public class UserDto {
 	}
 	
 	public static UserDto converter(User user) {
-		return new UserDto(user.getNome(),user.getIdade(),user.getFotoPath(),user.getConhecimentos(),
+		return new UserDto(user.getId(),user.getNome(),user.getIdade(),user.getFotoPath(),user.getConhecimentos(),
 				user.getFormacoes(),user.getHistoricoTrabalho(),user.getTelefones(),
 				user.getStatus(),user.getPermissoes());
 	}
@@ -97,6 +98,14 @@ public class UserDto {
 	}
 	public void setPermissoes(List<Permissao> permissoes) {
 		this.permissoes = permissoes;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 	

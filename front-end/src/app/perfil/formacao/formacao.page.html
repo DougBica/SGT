@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button  (click)='voltarParaPerfil()' defaultHref="perfil"></ion-back-button>
+      </ion-buttons>
+    <ion-title>Formações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+    <ion-card>
+      <!-- <img src="/assets/shapes.svg" alt="" /> -->
+        <ion-card-header>       
+          <ion-card-title>Suas Formações</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      <ion-content>
+        <ion-list *ngFor="let p of listaFormacao">
+            <ion-card style="cursor: pointer;"padding (click)=mostrarBtnModificar()>
+              <ion-input> 
+                Instituição: {{p.nomeInstituicao}}
+              </ion-input>
+              <ion-input> 
+                  Curso: {{p.nomeCurso}} 
+                </ion-input>
+              <ion-input> 
+                  Data Inicio: {{p.dtInicio}} 
+              </ion-input>
+              <ion-input> 
+                  Situação: {{p.situacao}} - N° Semestres: {{p.qntSemestres}}
+              </ion-input>
+              <h6 class="formatar" >Observação:</h6>
+              <ion-input> 
+                  {{p.observacao}}
+              </ion-input>
+              <ion-button *ngIf="editar" expand="full" color="primary" (click)=modificarFormacao(p)>Editar</ion-button>
+            </ion-card>   
+        </ion-list>
+      </ion-content>
+      <ion-button expand="full" color="primary" (click)=criarModalAdicionar()>Adicione uma Formação</ion-button>
+    </ion-content>
+

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button (click)='voltarParaPerfil()' defaultHref="perfil"></ion-back-button>
+      </ion-buttons>
+    <ion-title>Conhecimentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <!-- <img src="/assets/shapes.svg" alt="" /> -->
+      <ion-card-header>       
+        <ion-card-title>Seus Conhecimentos</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <ion-content>
+      <ion-list *ngFor="let p of listaConhecimentos">
+          <ion-card style="cursor: pointer;"padding (click)=mostrarBtnModificar()>
+            <ion-input> 
+                Conhecimento: {{p.descricao}} 
+            </ion-input>
+            <ion-input> 
+                Nível: {{p.nivelConhecimento}}
+            </ion-input>
+            <h6 >Observações :</h6>
+            <ion-input> 
+                {{p.observacao}}
+            </ion-input>
+            <ion-button *ngIf="editar" expand="full" color="primary" (click)=modificarConhecimento(p)>Editar</ion-button>
+          </ion-card>   
+      </ion-list>
+    </ion-content>
+    <ion-button expand="full" color="primary" (click)=criarModalAdicionar()>Adicione um conhecimento</ion-button>
+  </ion-content>

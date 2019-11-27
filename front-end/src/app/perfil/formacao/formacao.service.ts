@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { LoginModel } from './model/login.model';
 import { retry, catchError } from 'rxjs/operators'
-import { UserModel } from '../core/model/user.model';
+import { FormacaoModel } from 'src/app/core/model/formacao.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class FormacaoService {
 
   url = 'http://localhost:8080';
 
@@ -20,8 +19,8 @@ export class LoginService {
     })
   }
 
-  login(login):Observable<UserModel>{
-    return this.http.post<UserModel>(this.url + '/user/aut', JSON.stringify(login), this.httpOptions)
+  listar(id):Observable<Array<FormacaoModel>>{
+    return this.http.get<Array<FormacaoModel>>(this.url + '/formacao/listar/'+ id, this.httpOptions)
       .pipe(
         retry(1)
       )
